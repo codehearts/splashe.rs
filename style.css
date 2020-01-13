@@ -1,0 +1,55 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #33192f;
+    font: 18px 'avenir next', sans-serif;
+    line-height: 1.7;
+    color: #ffcedc;
+}
+
+body {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 80vw;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #ff7aab;
+}
+
+#splash-zone {
+    flex: 1 100%;
+}
+
+.splash-group {
+    flex: 1 50%;
+}
+
+.splash-group > h1 {
+    display: flex;
+    align-items: baseline;
+}
+
+.splash-group > h1::after {
+    background-color: #ffcedc;
+    margin: 0 1em 0 0.5ex;
+    display: inline-block;
+    content: '';
+    height: 2px;
+    width: 100%;
+}
+
+.splash-group > ul {
+    padding-left: 0;
+    list-style: none;
+}

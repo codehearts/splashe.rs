@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Splashe.rs</title>
+    <link rel="stylesheet" href="theme.css">
+  </head>
+  <body>
+    <section id="splash-zone"></section>
+
+    {% for site_group in site_groups %}
+    <article class="splash-group">
+        <h1>{{ site_group.label }}</h1>
+        <ul>
+            {% for site in site_group.sites %}
+            <li><a href="{{ site.url }}">{{ site.label }}</a></li>
+            {% endfor %}
+        </ul>
+    </article>
+    {% endfor %}
+
+    <script src="main.js"></script>
+  </body>
+</html
