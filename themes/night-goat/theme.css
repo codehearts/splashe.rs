@@ -1,0 +1,83 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-image: url('night-goat.jpg');
+    background-size: cover;
+    font: 14px cochin, serif;
+    line-height: 1.5;
+    color: #fed;
+}
+
+body {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-bottom;
+    width: 80vw;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #cde;
+}
+
+#splash-zone {
+    position: absolute;
+    top: 25vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    height: 10vh;
+    width: 30vw;
+}
+
+.splash-group {
+    margin-top: 1rem;
+    padding-right: 60vw;
+    width: 20vw;
+}
+
+.splash-group > h1 {
+    margin-top: 0;
+    display: flex;
+    align-items: baseline;
+    white-space: nowrap;
+}
+
+.splash-group > h1::after {
+    background-color: #fed;
+    margin-left: 1ex;
+    display: inline-block;
+    content: '';
+    height: 1px;
+    width: 100%;
+}
+
+.splash-group > ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.splash-group a {
+    opacity: 0.5;
+}
+
+.splash-group .match {
+    opacity: 1;
+}
+
+.splash-group .match.selected::before {
+    content: '★';
+    margin-right: 0.25em;
+    margin-left: -1.25em;
+    width: 1em;
+}
