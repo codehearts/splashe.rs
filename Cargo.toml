@@ -1,0 +1,17 @@
+[package]
+name = "splashers"
+version = "0.1.0"
+authors = ["Catherine Hart <katie@codehearts.com>"]
+edition = "2018"
+
+[lib]
+name = "splashers"
+path = "src/lib.rs"
+
+[[bin]]
+name = "splashers"
+path = "src/bin.rs"
+
+[dependencies]
+tera = "1"
+serde = { version = "1", features = ["derive"] }
