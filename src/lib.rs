@@ -7,6 +7,9 @@
 use std::boxed::Box;
 use tera::{Context, Tera};
 
+#[macro_use]
+extern crate log;
+
 mod site;
 
 mod config;

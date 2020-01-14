@@ -13,6 +13,8 @@ name = "splashers"
 path = "src/bin.rs"
 
 [dependencies]
+log = "0.4"
 tera = "1"
 toml = "0.5"
+env_logger = "0.7"
 serde = { version = "1", features = ["derive"] }

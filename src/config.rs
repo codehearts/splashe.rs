@@ -35,6 +35,7 @@ pub struct Config {
 impl Config {
     /// Creates a new Config object from a toml file
     pub fn try_from_toml(filename: &str) -> Result<Self, Box<dyn std::error::Error>> {
+        log::debug!("Reading config from {}", filename);
         let toml_contents = std::fs::read_to_string(filename)?;
         let config: Self = toml::from_str(toml_contents.as_str())?;
 
