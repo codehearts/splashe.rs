@@ -17,7 +17,8 @@ use crate::config::Config;
 pub fn create_site(_theme: Option<&str>) -> Result<(), Box<dyn std::error::Error>> {
     let tera = Tera::new("templates/**/*.html")?;
 
-    let render_context = Context::from_serialize(Config::new())?;
+    let config = Config::try_from_toml("splashers.toml")?;
+    let render_context = Context::from_serialize(config)?;
     let rendered_site = tera.render("index.html", &render_context)?;
 
     site::create()?;
