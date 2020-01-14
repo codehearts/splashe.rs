@@ -2,6 +2,8 @@
 name = "splashers"
 version = "0.1.0"
 authors = ["Catherine Hart <katie@codehearts.com>"]
+description = "Themeable splash page with fuzzy finding"
+license = "MIT"
 edition = "2018"
 
 [lib]
