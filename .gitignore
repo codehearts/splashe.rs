@@ -2,5 +2,5 @@
 **/*.rs.bk
 Cargo.lock
 
-splashers.toml
+splashers.yaml
 site/

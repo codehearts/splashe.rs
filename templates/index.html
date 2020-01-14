@@ -8,12 +8,12 @@
   <body>
     <section id="splash-zone"></section>
 
-    {% for site_group in site_groups %}
+    {% for label, sites in site_groups %}
     <article class="splash-group">
-        <h1>{{ site_group.label }}</h1>
+        <h1>{{ label }}</h1>
         <ul>
-            {% for site in site_group.sites %}
-            <li><a href="{{ site.url }}">{{ site.label }}</a></li>
+            {% for label, url in sites %}
+            <li><a href="{{ url }}">{{ label }}</a></li>
             {% endfor %}
         </ul>
     </article>

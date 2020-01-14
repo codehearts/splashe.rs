@@ -13,14 +13,14 @@ extern crate log;
 mod site;
 
 mod config;
-use crate::config::Config;
+use crate::config::try_from_yaml;
 
 /// Creates the site directory on disk with a rendered index.html
 /// The chosen theme will be used in the rendering of index.html
 pub fn create_site(_theme: Option<&str>) -> Result<(), Box<dyn std::error::Error>> {
     let tera = Tera::new("templates/**/*.html")?;
 
-    let config = Config::try_from_toml("splashers.toml")?;
+    let config = try_from_yaml("splashers.yaml")?;
     let render_context = Context::from_serialize(config)?;
     let rendered_site = tera.render("index.html", &render_context)?;
 

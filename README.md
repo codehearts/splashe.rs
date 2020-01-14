@@ -12,24 +12,17 @@ Use `cargo run` from within this repo to build and run splashers. Your generated
 
 ## Configuration
 
-splashers is controlled by a `splashers.toml` file in the repo directory. By specifying a theme and groups of sites, you can style it as you want and get quick access to your sites with fuzzy finding. Just start typing!
+splashers is controlled by a `splashers.yaml` file in the repo directory. By specifying a theme and groups of sites, you can style it as you want and get quick access to your sites with fuzzy finding. Just start typing!
 
 ## Example splashers.toml
 
-```toml
-theme = "night-goat"
-
-[[site_groups]]
-label = "Search"
-sites = [
-    { label = "DuckDuckGo", url = "https://duckduckgo.com" },
-    { label = "Google", url = "https://google.com" },
-]
-
-[[site_groups]]
-label = "For Fun"
-sites = [
-    { label = "GitHub", url = "https://github.com" },
-    { label = "Reddit", url = "https://reddit.com" },
-]
+```yaml
+theme: night-goat
+site_groups:
+    Search:
+        DuckDuckGo: https://duckduckgo.com
+        Google: https://google.com
+    For Fun:
+        GitHub: https://github.com
+        Reddit: https://reddit.com
 ```
