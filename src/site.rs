@@ -5,13 +5,18 @@ use std::io::prelude::Write;
 use std::path::Path;
 
 /// Creates the site directory on disk if it does not exist
-pub fn create() -> Result<(), std::io::Error> {
+pub fn create(config: &serde_yaml::Value) -> Result<(), std::io::Error> {
     debug!("Creating site directory: {}", "./site");
     DirBuilder::new().recursive(true).create("./site")?;
 
+    let theme = config
+        .get("theme")
+        .and_then(|theme| theme.as_str())
+        .unwrap_or("default");
+
     copy_file("main.js")?;
     copy_file("style.css")?;
-    copy_file(format!("themes/{}", "night-goat").as_str())?;
+    copy_file(format!("themes/{}", theme).as_str())?;
 
     Ok(())
 }
