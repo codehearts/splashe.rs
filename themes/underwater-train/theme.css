@@ -1,0 +1,102 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-image: url('underwater-train.png');
+    background-size: cover;
+    font: 21px 'avenir next', sans-serif;
+    line-height: 1.5;
+    color: #012;
+}
+
+body {
+    margin: 0 auto;
+    column-count: 3;
+    column-gap: 5vw;
+    width: 60vw;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #ead;
+}
+
+#splash-zone {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+#splash-zone > p {
+    background: #ead;
+    border-radius: 5px;
+    padding: 0 0.25em;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #f9f9ff;
+}
+
+.splash-group {
+    background: #f9f9ff;
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    display: inline-block;
+    overflow-y: hidden;
+    margin: 1rem;
+    width: 20vw;
+}
+
+.splash-group > h1 {
+    background: #ead;
+    padding: 0.5rem 1rem 0;
+    margin-top: 0;
+    color: #f9f9ff;
+}
+
+.splash-group > h1::after {
+    background-color: #f9f9ff;
+    /* lace pattern by @aegnis on codepen.io: https://codepen.io/aegnis/pen/bBpWGR */
+    background-image: radial-gradient(circle at 6px 0, #ead 5px, #ead 6px, rgba(255,255,255,0) 7px),
+					radial-gradient(circle at 12px 0, rgba(255,255,255,0) 11px, #ead 12px, rgba(255,255,255,0) 13px),
+					radial-gradient(circle at 12px 0, rgba(255,255,255,0) 4px, #ead 5px, rgba(255,255,255,0) 6px),
+					radial-gradient(circle at 12px 12px, rgba(255,255,255,0) 1px, #ead 2px, rgba(255,255,255,0) 3px),
+					linear-gradient(to left, rgba(255,255,255,0) 1px, #ead 2px, rgba(255,255,255,0) 3px);
+	background-repeat: repeat-x;
+	background-position: 6px 0px, 6px 4px, 6px 7px, -6px 8px, 8px 10px;
+	background-size: 12px 12px, 24px 13px, 24px 12px, 24px 24px, 24px 8px;
+    margin-top: calc(0.5rem - 5px);
+    margin-left: -1rem;
+    display: block;
+    content: '';
+    width: calc(100% + 2rem);
+    height: 25px;
+}
+
+.splash-group > ul {
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    list-style: none;
+}
+
+.splash-group a {
+    opacity: 0.25;
+}
+
+.splash-group .match {
+    opacity: 1;
+}
+
+.splash-group .match.selected {
+    background: #ead;
+    margin-left: -0.25rem;
+    padding: 0 0.25rem;
+    color: #f9f9ff;
+}
