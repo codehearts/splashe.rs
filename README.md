@@ -26,3 +26,8 @@ site_groups:
         GitHub: https://github.com
         Reddit: https://reddit.com
 ```
+
+## Credit
+- "night-goat" theme background by [Mini on pixiv](https://www.pixiv.net/en/artworks/75632428)
+- "underwater-train" theme background by [tama on pixiv](https://www.pixiv.net/en/artworks/63318516)
+- "underwater-train" theme lace styles from [aegnis on codepen](https://codepen.io/aegnis/pen/bBpWGR)
