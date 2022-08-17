@@ -31,3 +31,4 @@ site_groups:
 - "night-goat" theme background by [Mini on pixiv](https://www.pixiv.net/en/artworks/75632428)
 - "underwater-train" theme background by [tama on pixiv](https://www.pixiv.net/en/artworks/63318516)
 - "underwater-train" theme lace styles from [aegnis on codepen](https://codepen.io/aegnis/pen/bBpWGR)
+- "persona-5" theme background owned by Atlus
