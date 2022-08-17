@@ -76,8 +76,13 @@ class Splash {
 
             // Output the current match pattern
             this._outputElement.innerText += key;
-            previousSelectedElement.classList.remove('selected');
-            this.getFirstMatchElement().classList.add('selected');
+            if (previousSelectedElement) {
+              previousSelectedElement.classList.remove('selected');
+            }
+
+            if (this._matches.size > 0) {
+              this.getFirstMatchElement().classList.add('selected');
+            }
         }
     }
 
@@ -91,6 +96,10 @@ class Splash {
 
     _rewindLinksTo(index) {
         if (index < 1) {
+            if (this._matches.size > 0) {
+              this.getFirstMatchElement().classList.remove('selected');
+            }
+
             return;
         }
 
@@ -107,6 +116,10 @@ class Splash {
     }
 
     _clear() {
+        if (this._matches.size > 0) {
+          this.getFirstMatchElement().classList.remove('selected');
+        }
+
         this._rewindLinksTo(1);
     }
 
