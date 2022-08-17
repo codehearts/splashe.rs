@@ -14,7 +14,7 @@ Use `cargo run` from within this repo to build and run splashers. Your generated
 
 splashers is controlled by a `splashers.yaml` file in the repo directory. By specifying a theme and groups of sites, you can style it as you want and get quick access to your sites with fuzzy finding. Just start typing!
 
-## Example splashers.toml
+## Example splashers.yaml
 
 ```yaml
 theme: night-goat
