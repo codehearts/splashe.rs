@@ -1,8 +1,14 @@
+@font-face {
+  font-family: 'Wawati SC';
+  src: local('wawati sc'), url('WawaSC-Regular.otf') format('opentype');
+}
+
 html {
   background-image: url('persona-5.jpg');
   background-size: cover;
   background-attachment: fixed;
-  font: 18px 'wawati sc';
+  background-position: center;
+  font: 18px 'wawati sc', 'Hiragino Maru Gothic ProN', 'gill sans', 'arial rounded mt bold', sans-serif;
 }
 
 body {

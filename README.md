@@ -27,6 +27,12 @@ site_groups:
         Reddit: https://reddit.com
 ```
 
+## Custom Fonts in Modern Safari
+
+Modern versions of Safari block user-installed fonts from loading to prevent device fingerprinting. This includes local HTML documents, but can be circumvented by copying the fonts to your output directory and loading them with `@font-face` in `theme.css`. This is already done for the following fonts, which can be found at these locations if installed via Font Book:
+
+- Wawati SC: `/System/Library/PrivateFrameworks/FontServices.framework/Versions/A/Resources/Fonts/Subsets/WawaSC-Regular.otf`
+
 ## Credit
 - "night-goat" theme background by [Mini on pixiv](https://www.pixiv.net/en/artworks/75632428)
 - "underwater-train" theme background by [tama on pixiv](https://www.pixiv.net/en/artworks/63318516)
