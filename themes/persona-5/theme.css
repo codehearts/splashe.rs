@@ -4,6 +4,7 @@
 }
 
 html {
+  background-color: #D00004;
   background-image: url('persona-5.jpg');
   background-size: cover;
   background-attachment: fixed;
